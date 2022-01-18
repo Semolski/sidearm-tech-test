@@ -6035,6 +6035,9 @@ i.fas {
       @media (max-width: 1024px) {
         .section-cta-cards .cta-card-container .cta-card:nth-child(n+7):nth-child(-n+8) {
           display: none; } }
+      @media (max-width: 768px) {
+        .section-cta-cards .cta-card-container .cta-card:nth-child(n+5):nth-child(-n+8) {
+          display: none; } }
 
 .article-index {
   background-color: #fff;

@@ -715,6 +715,11 @@ i.fas {
           display: none;
         }
       }
+      @include tablet-portrait {
+        &:nth-child(n+5):nth-child(-n+8) {
+          display: none;
+        }
+      }
     }
   }
 }
