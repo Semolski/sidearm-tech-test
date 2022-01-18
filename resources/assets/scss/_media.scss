@@ -1,0 +1,55 @@
+// Phone Portrait
+@mixin phone-portrait {
+  @media (max-width: #{$phone-portrait}) {
+    @content;
+  }
+}
+
+// Phone Landscape
+@mixin phone-landscape {
+  @media (max-width: #{$phone-landscape}) {
+    @content;
+  }
+}
+
+// Tablet Portrait
+@mixin tablet-portrait {
+  @media (max-width: #{$tablet-portrait}) {
+    @content;
+  }
+}
+
+// Tablet Landscape
+@mixin tablet-landscape {
+  @media (max-width: #{$tablet-landscape}) {
+    @content;
+  }
+}
+
+// Tablet Large
+@mixin tablet-large {
+  @media (max-width: #{$tablet-large}) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// Desktop Large
+@mixin desktop-large {
+  @media (max-width: #{$desktop-large}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}
