@@ -500,6 +500,9 @@ main {
   section {
     > h1 {
       margin: 50px 0;
+      @include tablet-portrait {
+        font-size: 35px;
+      }
     }
     .hero {
       display: flex;
@@ -522,6 +525,9 @@ main {
       ul {
         display: flex;
         flex-direction: row;
+        @include tablet-portrait {
+          flex-direction: column;
+        }
 
         li {
           display: flex;

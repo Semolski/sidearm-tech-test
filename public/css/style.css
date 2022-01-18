@@ -5889,6 +5889,9 @@ nav {
 
 main section > h1 {
   margin: 50px 0; }
+  @media (max-width: 768px) {
+    main section > h1 {
+      font-size: 35px; } }
 
 main section .hero {
   display: flex;
@@ -5906,6 +5909,9 @@ main section .hero {
   main section .hero ul {
     display: flex;
     flex-direction: row; }
+    @media (max-width: 768px) {
+      main section .hero ul {
+        flex-direction: column; } }
     main section .hero ul li {
       display: flex;
       margin: 5px; }
