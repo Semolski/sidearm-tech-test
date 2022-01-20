@@ -6,7 +6,7 @@ function dropdownFunction(dropdown) {
     if ( dropdown.classList.contains("dropdown-click") === true ) {
 
         dropdown.addEventListener("click", function (e) {
-            e.preventDefault();        
+            e.preventDefault();
 
             let parent = this.parentElement;
 
@@ -23,7 +23,7 @@ function dropdownFunction(dropdown) {
             }
         });
     }
-    
+
     if ( dropdown.classList.contains("dropdown-hover") === true ) {
 
         dropdown.onmouseover = dropdown.onmouseout = dropdownHover;
@@ -31,16 +31,16 @@ function dropdownFunction(dropdown) {
         function dropdownHover(e){
             let parent = this.parentElement;
 
-            if( e.type == "mouseover" ){
+            if( e.type === "mouseover" ){
                 closeDropdown();
 
                 parent.classList.add("is-active");
                 this.classList.add("is-open");
-                
+
             }
         }
     }
-};
+}
 
 // Listen for clicks on the document
 window.addEventListener("click", function (e) {
@@ -53,21 +53,20 @@ window.addEventListener("click", function (e) {
 
 });
 
-
 // Close opened dropdowns
-function closeDropdown() { 
+function closeDropdown() {
     // Remove the is-open and is-active class from other opened dropdown
-    document.querySelectorAll(".dropdown-container").forEach(function (container) { 
+    document.querySelectorAll(".dropdown-container").forEach(function (container) {
         container.classList.remove("is-active")
     });
 
-    document.querySelectorAll(".dropdown").forEach(function (menu) { 
+    document.querySelectorAll(".dropdown").forEach(function (menu) {
         menu.classList.remove("is-open");
     });
 }
 
 // Close dropdown when mouse leaves the dropdown list
-// document.querySelectorAll(".dropdown-menu").forEach(function (dropDownList) { 
+// document.querySelectorAll(".dropdown-menu").forEach(function (dropDownList) {
 //     // Close the dropdown after user leave the list
 //     dropDownList.onmouseleave = closeDropdown;
 // });
