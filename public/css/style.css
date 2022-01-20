@@ -5853,21 +5853,23 @@ nav {
     nav .nav-right .nav-right-dropdown {
       position: relative;
       height: 72px; }
-      nav .nav-right .nav-right-dropdown .dropdown-toggle {
+      nav .nav-right .nav-right-dropdown .dropdown {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center; }
-        nav .nav-right .nav-right-dropdown .dropdown-toggle.is-open + .dropdown-items {
+        nav .nav-right .nav-right-dropdown .dropdown.is-open + .dropdown-items {
           display: flex;
           flex-direction: column;
           visibility: visible;
           opacity: 1;
           z-index: 9999; }
-        nav .nav-right .nav-right-dropdown .dropdown-toggle i {
+        nav .nav-right .nav-right-dropdown .dropdown i {
           margin-left: 10px; }
+        nav .nav-right .nav-right-dropdown .dropdown.is-open i {
+          transform: scale(1, -1); }
         @media (max-width: 1024px) {
-          nav .nav-right .nav-right-dropdown .dropdown-toggle {
+          nav .nav-right .nav-right-dropdown .dropdown {
             color: #fff; } }
       nav .nav-right .nav-right-dropdown .dropdown-items {
         background-color: #fff;
@@ -5878,14 +5880,15 @@ nav {
         opacity: 0;
         visibility: hidden;
         overflow: hidden;
-        transition: opacity .2s ease;
+        transition: .2s all ease;
         width: 160px; }
         nav .nav-right .nav-right-dropdown .dropdown-items .dropdown-menu-item {
-          cursor: pointer;
-          padding: 1em;
           text-align: center; }
-          nav .nav-right .nav-right-dropdown .dropdown-items .dropdown-menu-item:hover {
-            background-color: #ececec; }
+          nav .nav-right .nav-right-dropdown .dropdown-items .dropdown-menu-item a {
+            padding: 1em;
+            transition: .2s all linear; }
+            nav .nav-right .nav-right-dropdown .dropdown-items .dropdown-menu-item a:hover {
+              background-color: #ececec; }
     nav .nav-right .nav-cta {
       display: inline-block;
       margin: 0 0 0 10px; }

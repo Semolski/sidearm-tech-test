@@ -236,7 +236,7 @@ nav {
 
           &.is-open {
             i {
-              transform: scale(1, -1);;
+              transform: scale(1, -1);
             }
           }
         }
@@ -446,7 +446,7 @@ nav {
       position: relative;
       height: 72px;
 
-      .dropdown-toggle {
+      .dropdown {
         position: relative;
         display: flex;
         align-items: center;
@@ -464,6 +464,12 @@ nav {
           margin-left: 10px;
         }
 
+        &.is-open {
+          i {
+            transform: scale(1, -1);
+          }
+        }
+
         @include tablet-landscape {
           color: $white;
         }
@@ -478,16 +484,19 @@ nav {
         opacity: 0;
         visibility: hidden;
         overflow: hidden;
-        transition: opacity .2s ease;
+        transition: .2s all ease;
         width: 160px;
 
         .dropdown-menu-item {
-          cursor: pointer;
-          padding: 1em;
           text-align: center;
 
-          &:hover {
-            background-color: darken($alabaster, 5%);
+          a {
+            padding: 1em;
+            transition: .2s all linear;
+
+            &:hover {
+              background-color: darken($alabaster, 5%);
+            }
           }
         }
       }
